@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  background-color: #00080a;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+    Roboto, serif;
+  overflow: hidden;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.noselect {
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.mistic-bg {
+  background: radial-gradient(circle at center, #001f24 0%, #00080a 100%);
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100dvh;
+}
+
+.tv-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.lock-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+.loader-label {
+  color: #00e5ff;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.celestial-scanner {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scanner-rings {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(-90deg);
+}
+
+.ring {
+  fill: transparent;
+  stroke: #00e5ff;
+}
+
+.outer {
+  stroke-width: 1;
+  stroke-dasharray: 10 10;
+  opacity: 0.3;
+  animation: spin 20s linear infinite;
+}
+
+.inner {
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+  opacity: 0.5;
+  animation: spin 10s linear reverse infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progress-fill {
+  fill: transparent;
+  stroke: #ffffff;
+  stroke-width: 4;
+  filter: drop-shadow(0 0 8px #00e5ff);
+}
+
+.scanner-core {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 229, 255, 0.2) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+}
+
+.scanner-core.core-active {
+  opacity: 1;
+  animation: pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.message-screen {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.paragraph-reveal {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e0f7fa;
+  margin-bottom: 25px;
+  text-align: center;
+  opacity: 0; /* Inicia invisible para el stagger */
+  filter: blur(8px);
+  transform: translateY(10px); /* Efecto de elevación */
+  transition: all 0.5s ease;
+}
+
+.final-sigil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  will-change: transform;
+}
+
+.b-wings-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.subtle-heart {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -46%);
+  opacity: 0;
+}
+
+.b-letter {
+  font-size: 46px;
+  font-family: "Times New Roman", serif;
+  color: #ffffff;
+  filter: drop-shadow(0 0 15px #00e5ff);
+}
+
+.pascua-text {
+  margin-top: 15px;
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 8px #00e5ff);
+}
+
+.mistic-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00e5ff;
+}
